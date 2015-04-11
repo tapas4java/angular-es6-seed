@@ -16,13 +16,18 @@
 
   <body ng-app="DigiBankDevTool" ng-cloak layout="column" ng-controller="HomeCtrl as ul" md-theme="{{theme}}" >
 
-    <md-toolbar layout="row">
+    <md-toolbar class="md-toolbar-tools" layout="row">
       <md-button class="menu" hide-gt-sm ng-click="ul.toggleToolsList()" aria-label="Show Tools List">
         <md-icon md-svg-icon="menu" ></md-icon>
       </md-button>
 
       <h1 hide-gt-sm >Dev Tool</h1>
 	  <a href="/" layout="row"><img id="logo" ng-src="./assets/logo.png" hide-sm /></a>
+
+      <span flex></span>
+      <md-button class="md-icon-button" aria-label="About" ng-click="ul.showSimpleModal($event)">
+        <md-icon md-svg-icon="share" style="color: greenyellow;"></md-icon>
+      </md-button>
 	  <md-select ng-model="selectedTheme" placeholder="Select a theme" class="themeChooser">
         <md-option ng-repeat="themeName in ul.themeList" ng-value="themeName" ng-selected="themeName == theme">{{ themeName }}</md-option>
       </md-select>
@@ -45,10 +50,10 @@
         </md-sidenav>
 
         <md-content flex id="content" >
-			
+
 			<ng-viewport></ng-viewport>
 			
-			<md-button class="md-fab md-accent md-fab-bottom-right" ng-click="ul.share($event)" aria-label="Share">
+			<md-button class="md-fab md-accent md-fab-bottom-right" ng-click="ul.share($event);ul.showSimpleToast();" aria-label="Share">
 				<md-icon md-svg-icon="share"></md-icon>
 			</md-button>
 

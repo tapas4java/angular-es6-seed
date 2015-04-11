@@ -1,12 +1,14 @@
 
 class HomeController {
 
-    constructor(HomeService, $mdSidenav, $mdBottomSheet, $scope, $router, $log){
+    constructor(HomeService, $mdSidenav, $mdBottomSheet, $scope, $router, $log, $mdToast, $mdDialog){
         this.HomeService = HomeService;
         this.$mdSidenav = $mdSidenav;
         this.$mdBottomSheet = $mdBottomSheet;
         this.$router = $router;
         this.$log = $log;
+        this.$mdToast = $mdToast;
+        this.$mdDialog = $mdDialog;
 
         this.selected     = null;
         this.tools        = [ ];
@@ -44,7 +46,7 @@ class HomeController {
 
         $scope.$watch('selectedTheme', function(value) {
 
-            if (value != undefined) {
+            if (value !== undefined) {
                 $scope.theme = value + '-theme';
                 console.log('Changed theme', $scope.theme, value);
             }
@@ -65,6 +67,31 @@ class HomeController {
         ]);
     }
 
+    /**
+     * Show Toast
+     */
+    showSimpleToast() {
+        this.$mdToast.show(
+            this.$mdToast.simple()
+                .content('Simple Toast!')
+                .position('top right')
+                .hideDelay(3000)
+        );
+    }
+
+    /**
+     * Show modal dialog.
+     */
+    showSimpleModal(event){
+        this.$mdDialog.show(
+            this.$mdDialog.alert()
+                .title('This is an alert title')
+                .content('You can specify some description text in here.')
+                .ariaLabel('Alert Dialog Demo')
+                .ok('Got it!')
+                .targetEvent(event)
+        );
+    }
 
     /**
      * First hide the bottomsheet IF visible, then
@@ -123,6 +150,6 @@ class HomeController {
 
 }
 
-HomeController.$inject = ['HomeService', '$mdSidenav', '$mdBottomSheet', '$scope', '$router', '$log'];
+HomeController.$inject = ['HomeService', '$mdSidenav', '$mdBottomSheet', '$scope', '$router', '$log', '$mdToast', '$mdDialog'];
 
 export default HomeController;

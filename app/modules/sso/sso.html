@@ -80,6 +80,19 @@
 
   <md-tab label="Login">
       <form name="loginForm" style="font-size:1.2em" >
+          <div layout layout-sm="column">
+              <md-input-container style="width:30%">
+                  <label>Private Key</label>
+                  <input ng-model="user.company" disabled>
+              </md-input-container>
+              <md-input-container style="width:30%">
+                  <label>Random Number</label>
+                  <input ng-model="user.company" disabled>
+              </md-input-container>
+              <md-input-container>
+                  <md-button class="md-raised md-primary">Generate Public Key & Random</md-button>
+              </md-input-container>
+          </div>
           <md-input-container flex>
               <label>User Name</label>
               <input ng-model="user.name" type="text">
