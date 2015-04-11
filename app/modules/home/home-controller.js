@@ -73,7 +73,7 @@ class HomeController {
     showSimpleToast() {
         this.$mdToast.show(
             this.$mdToast.simple()
-                .content('Simple Toast!')
+                .content('Service Call Succeeded!')
                 .position('top right')
                 .hideDelay(3000)
         );
@@ -85,10 +85,10 @@ class HomeController {
     showSimpleModal(event){
         this.$mdDialog.show(
             this.$mdDialog.alert()
-                .title('This is an alert title')
-                .content('You can specify some description text in here.')
+                .title('DigiBank Dev Tool - designed and Developed by TITANS!')
+                .content('Unified tool for performing common development activities like SSO Stuff, Services Check, Properties Files Updation, Log Check etc.')
                 .ariaLabel('Alert Dialog Demo')
-                .ok('Got it!')
+                .ok('Got IT!')
                 .targetEvent(event)
         );
     }

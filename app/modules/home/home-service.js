@@ -10,13 +10,13 @@ class HomeService {
             {
                 name: 'SSO',
                 path: 'sso',
-                avatar: 'sso',
+                avatar: 'home',
                 content: 'I love cheese, especially airedale queso. Cheese and biscuits halloumi cauliflower cheese cottage cheese swiss boursin fondue caerphilly. Cow port-salut camembert de normandie macaroni cheese feta who moved my cheese babybel boursin. Red leicester roquefort boursin squirty cheese jarlsberg blue castello caerphilly chalk and cheese. Lancashire.'
             },
             {
                 name: 'OAUTH',
                 path: 'oauth',
-                avatar: 'oauth',
+                avatar: 'sso',
                 content: 'Webtwo ipsum dolor sit amet, eskobo chumby doostang bebo. Bubbli greplin stypi prezi mzinga heroku wakoopa, shopify airbnb dogster dopplr gooru jumo, reddit plickers edmodo stypi zillow etsy.'
             },
             {
