@@ -1,0 +1,176 @@
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size:14px;
+  height:100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Toolbar area */
+
+.menu {
+  background-color: transparent;
+  border: none;
+  height: 38px;
+  margin: 16px;
+  width: 36px;
+}
+
+md-toolbar h1 {
+  font-size: 1.250em;
+  font-weight: 400;
+  margin-left: 0px;
+  margin-top: 22px;
+}
+
+/* Sidenav area */
+
+md-list {
+  padding: 0px 0px 0px 0px;
+}
+
+md-list .md-button {
+  color: inherit;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+}
+
+md-list .md-button.selected {
+  color: #03a9f4;
+  background-color:lightgrey;
+}
+
+md-sidenav {
+	background-color:rgb(244, 242, 242);
+}
+
+/* Primary content area */
+
+#content {
+  overflow: hidden;
+}
+
+#content  {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+}
+
+#content .md-button.share {
+  background-color: transparent;
+  border: none;
+  width: 48px;
+  height: 48px;
+  margin: 8px auto 16px 0;
+  position: absolute;
+  bottom: 60px;
+  right: 30px;
+}
+
+#content md-icon.avatar {
+  margin-top: 10px;
+}
+
+#content .md-button.share > md-icon {
+  fill:black;
+  width:36px;
+  height:36px;
+}
+
+md-button.menuBtn > md-icon {
+  fill:white;
+  width:24px;
+  height:24px;
+}
+
+#content .md-button.share:active > md-icon {
+  background-color: #dadada;
+  border-radius: 75%;
+  padding:4px;
+  transition: all 100ms ease-out 30ms;
+}
+
+#content img {
+  display: block;
+  height: auto;
+  max-width: 500px;
+}
+
+/* Utils */
+
+.content-wrapper {
+  position: relative;
+}
+
+/* Typography support coming in 0.8.0 */
+
+.avatar {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  /*border: 1px solid #ddd;*/
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0px;
+  vertical-align: middle;
+  zoom:0.70;
+  transform: translateZ(0);
+  -webkit-transform: scale(0.70);
+  -moz-transform:scale(0.70);
+}
+
+
+md-bottom-sheet  md-icon {
+  margin-right:20px;
+}
+
+span.name1 {
+  font-weight: bold;
+  font-size:1.1em;
+  padding-left:5px;
+}
+
+/*Added by Tapas*/
+md-select{
+	margin-left:auto;
+}
+
+.themeChooser{
+  margin-top:15px;
+  margin-right:10px;
+  color:white !important;
+}
+
+.md-header {
+  border-bottom: 1px solid #D8D8D8; 
+}
+
+.md-tab-content {
+  background: white; 
+}
+
+.title {
+  padding-top: 8px;
+  padding-right: 8px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #888;
+  margin-top: 24px; 
+}
+
+.md-tabs-content {
+    margin-top: 20px;
+}
+
+.buttonBar {
+  margin: 5px 10px 5px 10px;
+}
+
+/**
+ * Hide when Angular is not yet loaded and initialized
+ */
+[ng-cloak] {
+  display: none;
+}

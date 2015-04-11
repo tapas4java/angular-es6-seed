@@ -1,0 +1,162 @@
+<md-tabs  md-selected="selectedIndex" flex>
+  <md-tab label="Create User">
+      <form name="userForm" style="font-size:1.2em" >
+          <div layout layout-sm="column">
+              <md-input-container style="width:30%">
+                  <label>Private Key</label>
+                  <input ng-model="user.company" disabled>
+              </md-input-container>
+              <md-input-container style="width:30%">
+                  <label>Random Number</label>
+                  <input ng-model="user.company" disabled>
+              </md-input-container>
+              <md-input-container>
+                  <md-button class="md-raised md-primary">Generate Public Key & Random</md-button>
+              </md-input-container>
+          </div>
+          <div layout layout-sm="column">
+              <md-input-container flex>
+                  <label>Mobile</label>
+                  <input ng-model="user.firstName">
+              </md-input-container>
+              <md-input-container flex>
+                  <label>Email</label>
+                  <input ng-model="theMax">
+              </md-input-container>
+              <md-input-container flex>
+                  <label>Birth Date</label>
+                  <input type="date" ng-model="user.submissionDate">
+              </md-input-container>
+          </div>
+          <div layout layout-sm="column">
+              <md-input-container flex>
+                  <md-radio-group ng-model="user.salutation" layout="row">
+                      <md-radio-button selected value="MR">Male</md-radio-button>
+                      <md-radio-button value="MS">Female</md-radio-button>
+                  </md-radio-group>
+              </md-input-container>
+              <md-select placeholder="Select City of Residence" ng-model="user.city" flex>
+                  <md-option value="BANGL">Banglore</md-option>
+                  <md-option value="MUM">Mumbai</md-option>
+                  <md-option value="KOL">Kolkata</md-option>
+                  <md-option value="DEL">New Delhi</md-option>
+                  <md-option value="MAD">Madras</md-option>
+                  <md-option value="PUN">Pune</md-option>
+              </md-select>
+              <md-input-container flex>
+                  <label>Name as AADHAAR</label>
+                  <input ng-model="user.postalCode">
+              </md-input-container>
+          </div>
+          <div layout layout-sm="column">
+              <md-input-container style="width:30%">
+                  <label>AADHAAR</label>
+                  <input ng-model="user.AADHAAR">
+              </md-input-container>
+              <md-input-container style="width:30%">
+                  <label>LCIN</label>
+                  <input ng-model="user.LCIN">
+              </md-input-container>
+              <md-input-container>
+                  <md-button class="md-raised md-primary">Generate AADHAAR & LCIN</md-button>
+              </md-input-container>
+          </div>
+          <div layout layout-sm="column">
+              <md-input-container flex>
+                  <label>User Name</label>
+                  <input ng-model="user.company">
+              </md-input-container>
+              <md-input-container flex>
+                  <label>Password</label>
+                  <input ng-model="user.company">
+              </md-input-container>
+          </div>
+          <md-input-container layout-align="center" layout="row">
+              <md-button class="md-raised md-primary buttonBar" style="width:20%">Register</md-button>
+              <md-button class="md-raised md-warn buttonBar" style="width:20%">Reset</md-button>
+          </md-input-container>
+      </form>
+  </md-tab>
+
+  <md-tab label="Login">
+      <form name="loginForm" style="font-size:1.2em" >
+          <md-input-container flex>
+              <label>User Name</label>
+              <input ng-model="user.name" type="text">
+          </md-input-container>
+          <md-input-container flex>
+              <label>Password</label>
+              <input ng-model="user.password" type="text">
+          </md-input-container>
+          <md-input-container layout-align="center" layout="row" flex>
+              <md-button class="md-raised md-primary buttonBar" style="width:20%">Login</md-button>
+              <md-button class="md-raised md-warn buttonBar" style="width:20%">Reset</md-button>
+          </md-input-container>
+      </form>
+  </md-tab>
+
+  <md-tab label="Verify User">
+      <form name="verifyForm" style="font-size:1.2em" >
+          <div layout layout-sm="column">
+              <md-input-container style="width:60%">
+                  <label>Username to verify</label>
+                  <input ng-model="user.title">
+              </md-input-container>
+              <md-input-container layout-align="center">
+                  <md-button class="md-raised md-primary">Verify User</md-button>
+              </md-input-container>
+          </div>
+      </form>
+  </md-tab>
+
+  <md-tab label="Lock/Unlock User">
+      <form name="lockForm" style="font-size:1.2em" >
+          <div layout layout-sm="column">
+              <md-input-container style="width:60%">
+                  <label>Username to unlock</label>
+                  <input ng-model="user.title">
+              </md-input-container>
+              <md-input-container layout-align="center">
+                  <md-button class="md-raised md-primary">UnLock User</md-button>
+              </md-input-container>
+          </div>
+          <div layout layout-sm="column">
+              <md-input-container style="width:60%">
+                  <label>Username to lock</label>
+                  <input ng-model="user.email" type="email">
+              </md-input-container>
+              <md-input-container layout-align="center">
+                  <md-button class="md-raised md-warn">lock User</md-button>
+              </md-input-container>
+          </div>
+      </form>
+  </md-tab>
+
+  <md-tab label="Activate User">
+      <form name="activateForm" style="font-size:1.2em" >
+          <div layout layout-sm="column">
+              <md-input-container style="width:60%">
+                  <label>Username to activate</label>
+                  <input ng-model="user.title">
+              </md-input-container>
+              <md-input-container layout-align="center">
+                  <md-button class="md-raised md-primary">Activate User</md-button>
+              </md-input-container>
+          </div>
+      </form>
+  </md-tab>
+
+  <md-tab label="Remove User">
+      <form name="removeForm" style="font-size:1.2em" >
+          <div layout layout-sm="column">
+              <md-input-container style="width:60%">
+                  <label>Username to remove</label>
+                  <input ng-model="user.title">
+              </md-input-container>
+              <md-input-container layout-align="center">
+                  <md-button class="md-raised md-primary">Remove User</md-button>
+              </md-input-container>
+          </div>
+      </form>
+  </md-tab>
+</md-tabs>
