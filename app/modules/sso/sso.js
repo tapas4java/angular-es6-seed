@@ -3,7 +3,7 @@ import SsoService from "./sso-service";
 
 var ssoModule = angular.module("sso", ['ngMaterial']);
 
-ssoModule.controller("SsoCtrl", SsoController);
+ssoModule.controller("SsoController", SsoController);
 ssoModule.service("SsoService", SsoService);
 
 export default ssoModule;

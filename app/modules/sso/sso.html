@@ -1,4 +1,4 @@
-<md-tabs  md-selected="selectedIndex" flex >
+<md-tabs md-dynamic-height md-border-bottom md-selected="selectedIndex" >
   <md-tab label="Create User">
       <form name="userForm" style="font-size:1.2em" >
           <div layout layout-sm="column">
@@ -72,7 +72,7 @@
               </md-input-container>
           </div>
           <md-input-container layout-align="center" layout="row">
-              <md-button class="md-raised md-primary buttonBar" style="width:20%" >
+              <md-button class="md-raised md-primary buttonBar" style="width:20%" ng-click="ul.showSimpleToast()">
                   <md-icon md-svg-icon="checkmark" ></md-icon>     Register</md-button>
               <md-button class="md-raised md-warn buttonBar" style="width:20%">
                   <md-icon md-svg-icon="cross" ></md-icon>     Reset</md-button>
@@ -103,9 +103,11 @@
               <label>Password</label>
               <input ng-model="user.password" type="text">
           </md-input-container>
-          <md-input-container layout-align="center" layout="row" flex>
-              <md-button class="md-raised md-primary buttonBar" style="width:20%"><md-icon md-svg-icon="man" ></md-icon>     Login</md-button>
-              <md-button class="md-raised md-warn buttonBar" style="width:20%"><md-icon md-svg-icon="cross" ></md-icon>     Reset</md-button>
+          <md-input-container layout-align="center" layout="row" flex ng-click="ul.showSimpleToast()">
+              <md-button class="md-raised md-primary buttonBar" style="width:20%">
+                  <md-icon md-svg-icon="man" ></md-icon>     Login</md-button>
+              <md-button class="md-raised md-warn buttonBar" style="width:20%">
+                  <md-icon md-svg-icon="cross" ></md-icon>     Reset</md-button>
           </md-input-container>
       </form>
   </md-tab>

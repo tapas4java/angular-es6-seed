@@ -34,15 +34,26 @@ md-list .md-button {
   font-weight: 500;
   text-align: left;
   width: 100%;
+  border-radius:0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 md-list .md-button.selected {
   color: #03a9f4;
   background-color:lightgrey;
+  margin: 0px;
+  padding: 0px;
+  border-radius:0px;
 }
 
 md-sidenav {
 	background-color:rgb(244, 242, 242);
+}
+
+.separator {
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Primary content area */
@@ -142,14 +153,6 @@ md-select{
   margin-left:20px;
   margin-right:10px;
   color:white !important;
-}
-
-.md-header {
-  border-bottom: 1px solid #D8D8D8; 
-}
-
-.md-tab-content {
-  background: white; 
 }
 
 .title {
