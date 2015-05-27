@@ -1,5 +1,5 @@
 
-class HomeController {
+export class HomeController {
 
     constructor(HomeService, $mdSidenav, $mdBottomSheet, $scope, $router, $log, $mdToast, $mdDialog){
         this.HomeService = HomeService;
@@ -63,7 +63,7 @@ class HomeController {
             { path: '/properties', component: 'properties' },
             { path: '/logs', component: 'logs' },
             { path: '/settings', component: 'settings' },
-            { path: '/oauth', component: 'oauth' }
+            { path: '/health', component: 'health' }
         ]);
     }
 
@@ -151,5 +151,3 @@ class HomeController {
 }
 
 HomeController.$inject = ['HomeService', '$mdSidenav', '$mdBottomSheet', '$scope', '$router', '$log', '$mdToast', '$mdDialog'];
-
-export default HomeController;

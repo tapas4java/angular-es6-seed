@@ -1,12 +1,12 @@
 
-class Config {
+export class Config {
 
     constructor($mdThemingProvider, $mdIconProvider, localStorageServiceProvider, $componentLoaderProvider ){
 
         $mdIconProvider
             .defaultIconSet("./assets/svg/avatars.svg"          , 128)
             .icon("sso"        , "./assets/svg/sso.svg"         , 128)
-            .icon("oauth"      , "./assets/svg/oauth.svg"       , 128)
+            .icon("health"     , "./assets/svg/oauth.svg"       , 128)
             .icon("services"   , "./assets/svg/services.svg"    , 128)
             .icon("logs"       , "./assets/svg/logs.svg"        , 128)
             .icon("properties" , "./assets/svg/properties.svg"  , 128)
@@ -72,5 +72,3 @@ class Config {
 }
 
 Config.$inject = ['$mdThemingProvider', '$mdIconProvider', 'localStorageServiceProvider', '$componentLoaderProvider'];
-
-export default Config;

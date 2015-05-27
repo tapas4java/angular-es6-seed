@@ -1,5 +1,5 @@
 
-class SsoController {
+export class SsoController {
 
     constructor(SsoService, $mdSidenav, $mdBottomSheet, $router, $log, $mdToast, $mdDialog) {
         this.SsoService = SsoService;
@@ -15,5 +15,3 @@ class SsoController {
 }
 
 SsoController.$inject = ['SsoService', '$mdSidenav', '$mdBottomSheet', '$router', '$log', '$mdToast', '$mdDialog'];
-
-export default SsoController;

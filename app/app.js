@@ -1,6 +1,6 @@
-import homeModule from './modules/home/home';
-import ssoModule from './modules/sso/sso';
-import Config from './config';
+import {homeModule} from './modules/home/home';
+import {ssoModule} from './modules/sso/sso';
+import {Config} from './config';
 
 var appModule = angular.module("DigiBankDevTool", ['ngMaterial', 'ngNewRouter', 'LocalStorageModule', 'restangular', homeModule.name, ssoModule.name]);
 

@@ -1,5 +1,5 @@
 
-class SsoService {
+export class SsoService {
 
     constructor($q) {
         this.$q = $q;
@@ -9,4 +9,3 @@ class SsoService {
 
 SsoService.$inject = ['$q'];
 
-export default SsoService;

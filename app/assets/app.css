@@ -37,6 +37,7 @@ md-list .md-button {
   border-radius:0px;
   margin: 0px;
   padding: 0px;
+  overflow: inherit;
 }
 
 md-list .md-button.selected {
