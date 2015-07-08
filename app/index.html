@@ -25,12 +25,12 @@
 	  <a href="/" layout="row"><img id="logo" ng-src="./assets/logo.png" hide-sm /></a>
 
       <span flex></span>
-      <md-button class="md-icon-button md-raised" aria-label="About" ng-click="ul.showSimpleModal($event)">
-        <md-icon md-svg-icon="info"></md-icon>
-      </md-button>
 	  <md-select ng-model="selectedTheme" placeholder="Select a theme" class="themeChooser">
         <md-option ng-repeat="themeName in ul.themeList" ng-value="themeName" ng-selected="themeName == theme">{{ themeName }}</md-option>
       </md-select>
+      <md-button class="md-icon-button md-raised" aria-label="About" ng-click="ul.showSimpleModal($event)">
+        <md-icon md-svg-icon="info"></md-icon>
+      </md-button>
     </md-toolbar>
 
     <div flex layout="row">

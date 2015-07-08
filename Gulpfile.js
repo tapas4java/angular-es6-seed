@@ -7,6 +7,7 @@ var reload = browserSync.reload;
 
 var SOURCE_FILES = ['!app/**/*_test.js', 'app/*.js', 'app/modules/**/*.js'];
 var SOURCE_HTML = ['app/*.html', 'app/modules/**/*.html'];
+var SOURCE_CSS = ['app/assets/*.css'];
 
 // Runs JSHint Report against all JS files in app
 gulp.task('lint', function () {
@@ -20,7 +21,7 @@ gulp.task('browserSync', function() {
     browserSync({
         logConnections: true,
         logFileChanges: true,
-        notify: true,
+        notify: false,
         open: true,
         server: {
             baseDir: "./app"
@@ -33,6 +34,7 @@ gulp.task('watch', function () {
     // Lint the JS files when they change
     gulp.watch(SOURCE_FILES, ['lint', 'traceur', reload]);
     gulp.watch(SOURCE_HTML, reload);
+    gulp.watch(SOURCE_CSS, reload);
 });
 
 /* Sourcemaps seem to not be working when a base is specified */

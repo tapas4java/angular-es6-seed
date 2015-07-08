@@ -59,14 +59,9 @@ md-sidenav {
 
 /* Primary content area */
 
-#content {
-  overflow: hidden;
-}
-
 #content  {
-  padding-left: 40px;
+  padding-left: 30px;
   padding-right: 40px;
-  padding-top: 5px;
 }
 
 #content .md-button.share {
@@ -121,7 +116,7 @@ md-button.menuBtn > md-icon {
   position: relative;
   width: 90px;
   height: 90px;
-  /*border: 1px solid #ddd;*/
+  border: 1px solid #ddd;
   border-radius: 50%;
   display: inline-block;
   overflow: hidden;
@@ -150,8 +145,7 @@ md-select{
 }
 
 .themeChooser{
-  margin-top:0px;
-  margin-left:20px;
+  margin-top:20px;
   margin-right:10px;
   color:white !important;
 }
@@ -165,8 +159,8 @@ md-select{
   margin-top: 24px; 
 }
 
-.md-tabs-content {
-    margin-top: 20px;
+md-tab-content {
+    top: 20px;
 }
 
 .buttonBar {
